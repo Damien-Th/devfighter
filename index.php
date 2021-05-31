@@ -102,11 +102,14 @@ $manager = new PlayerManager($bdd);
 
 
     <?php
+    //Manuel mode -->
     // update the health of player who was committed from the form "button"
     if (!empty($_POST['button'])) {
         $manager->update($_POST['button']);
     }
 
+
+    //auto mode ->
     if (!empty($_POST['endGame'])) {
         $manager->resetGame();
         $loopEnd = false;
@@ -156,9 +159,11 @@ $manager = new PlayerManager($bdd);
             echo  htmlspecialchars($unPerso->firstname()), ' - ', htmlspecialchars($unPerso->lastname()), ' (type: ' . $unPerso->type_perso(), ' - ', ' health: ' . $unPerso->health(), ')<br />';
         ?>
 
-    <form action="index.php" method="POST">
+    <!-- Manuel mode-->
+
+    <!-- <form action="index.php" method="POST">
         <input type="submit" name="button" value="<?= $unPerso->id(); ?>" />
-    </form>
+    </form> -->
     <br>
 <?php
 
