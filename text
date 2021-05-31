@@ -13,22 +13,3 @@ commercial = 120 points
 nom et prenom
 attaque = 10
 les commerciaux ont une attaque “ça prendra que 5mn” contre les développeurs
-
-
-
-pour rezet le jeux 
-
-
-{
-    $bdd = new PDO('mysql:host=localhost:3306;dbname=test;charset=utf8', 'root', 'root');
-    $req = $bdd->prepare("DELETE FROM akyos_game");
-    $req->execute();
-    $req->closeCursor();
-
-
-    $bdd = new PDO('mysql:host=localhost:3306;dbname=test;charset=utf8', 'root', 'root');
-    $req = $bdd->prepare("ALTER TABLE akyos_game AUTO_INCREMENT = 1");
-    $req->execute();
-    $req->closeCursor();
-
-}
