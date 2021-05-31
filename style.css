@@ -1,0 +1,16 @@
+form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.persofile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.profil {
+    margin: 20px;
+}

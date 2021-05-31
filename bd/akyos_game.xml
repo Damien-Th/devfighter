@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+- phpMyAdmin XML Dump
+- version 5.1.0
+- https://www.phpmyadmin.net
+-
+- Hôte : localhost:3306
+- Généré le : lun. 31 mai 2021 à 12:06
+- Version du serveur :  5.7.24
+- Version de PHP : 8.0.3
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="test" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="akyos_game">
+                CREATE TABLE `akyos_game` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `firstname` varchar(20) NOT NULL,
+                  `lastname` varchar(20) NOT NULL,
+                  `type_perso` varchar(50) NOT NULL,
+                  `health` int(3) NOT NULL,
+                  `atq` int(2) NOT NULL DEFAULT '10',
+                  `spec_atq` int(2) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données : 'test'
+    -->
+    <database name="test">
+        <!-- Table akyos_game -->
+    </database>
+</pma_xml_export>

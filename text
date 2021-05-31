@@ -1,0 +1,34 @@
+chef de projet = 160 points
+nom et prenom
+attaque = 10
+défense spéciale “planning” call only once protect against commercial
+attaque "ticket" use once only to attack developper and cost 15pv
+
+developpeur = 140 points
+nom et prenom
+attaque = 10
+defence "c'est pas vendu against commercial only once
+
+commercial = 120 points
+nom et prenom
+attaque = 10
+les commerciaux ont une attaque “ça prendra que 5mn” contre les développeurs
+
+
+
+pour rezet le jeux 
+
+
+{
+    $bdd = new PDO('mysql:host=localhost:3306;dbname=test;charset=utf8', 'root', 'root');
+    $req = $bdd->prepare("DELETE FROM akyos_game");
+    $req->execute();
+    $req->closeCursor();
+
+
+    $bdd = new PDO('mysql:host=localhost:3306;dbname=test;charset=utf8', 'root', 'root');
+    $req = $bdd->prepare("ALTER TABLE akyos_game AUTO_INCREMENT = 1");
+    $req->execute();
+    $req->closeCursor();
+
+}
